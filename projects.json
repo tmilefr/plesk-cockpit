@@ -1,22 +1,19 @@
 [
   {
     "name": "site_travaux",
-    "url": "https://travaux.votre-domaine.fr",
+    "url": "https://travaux.dev-asso.fr",
+    "path": "/var/www/vhosts/dev-asso.fr/travaux.dev-asso.fr",
     "description": "Exemple de fiche complète : adaptez ou supprimez les champs inutiles",
     "stack": "Node.js",
     "node": "20",
     "port": 3001,
-    "db": "SQLite (data/travaux.db)",
-    "repo": "git@github.com:vous/site_travaux.git",
+    "db": "SQLite",
     "branch": "main",
-    "deploy": "Extension Git de Plesk, déploiement automatique",
-    "notes": "Redémarrer l'application depuis Node.js Toolkit après un changement du .env",
-    "pleskUrl": "",
-    "path": "",
-    "gitDir": ""
+    "deploy": "Extension Git de Plesk",
+    "notes": "Exemple de note : redémarrer l'application depuis Node.js Toolkit après un changement du .env"
   },
-  { "name": "wedding", "url": "https://wedding.votre-domaine.fr" },
-  { "name": "regio", "url": "https://regio.votre-domaine.fr" },
-  { "name": "nijumatim", "url": "https://nijumatim.votre-domaine.fr" },
-  { "name": "banana", "url": "https://banana.votre-domaine.fr" }
+  { "name": "wedding",   "url": "https://wedding.dev-asso.fr",   "path": "/var/www/vhosts/dev-asso.fr/wedding.dev-asso.fr" },
+  { "name": "regio",     "url": "https://regio.dev-asso.fr",     "path": "/var/www/vhosts/dev-asso.fr/regio.dev-asso.fr" },
+  { "name": "nijumatim", "url": "https://nijumatim.dev-asso.fr", "path": "/var/www/vhosts/dev-asso.fr/nijumatim.dev-asso.fr" },
+  { "name": "banana",    "url": "https://banana.dev-asso.fr",    "path": "/var/www/vhosts/dev-asso.fr/banana.dev-asso.fr" }
 ]
