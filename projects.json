@@ -1,19 +1,120 @@
 [
   {
-    "name": "site_travaux",
-    "url": "https://travaux.dev-asso.fr",
-    "path": "/var/www/vhosts/dev-asso.fr/travaux.dev-asso.fr",
-    "description": "Exemple de fiche complète : adaptez ou supprimez les champs inutiles",
-    "stack": "Node.js",
-    "node": "20",
-    "port": 3001,
-    "db": "SQLite",
+    "name": "regiotesting",
+    "url": "https://RegioTesting.dev-asso.fr",
+    "description": "Environnement de test Regio",
+    "path": "/var/www/vhosts/dev-asso.fr/RegioTesting.dev-asso.fr",
+    "repo": "https://github.com/tmilefr/site_travaux",
+    "branch": "develop",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 0 Mo, 0 Mo/mois, actif. Branches GitHub : main, develop."
+  },
+  {
+    "name": "wedding",
+    "url": "https://wedding.dev-asso.fr",
+    "description": "Site mariage",
+    "path": "/var/www/vhosts/dev-asso.fr/wedding.dev-asso.fr",
+    "repo": "https://github.com/tmilefr/wedding",
     "branch": "main",
     "deploy": "Extension Git de Plesk",
-    "notes": "Exemple de note : redémarrer l'application depuis Node.js Toolkit après un changement du .env"
+    "notes": "Plesk : 0.4 Mo, 2.1 Mo/mois, actif. Branches GitHub : main."
   },
-  { "name": "wedding",   "url": "https://wedding.dev-asso.fr",   "path": "/var/www/vhosts/dev-asso.fr/wedding.dev-asso.fr" },
-  { "name": "regio",     "url": "https://regio.dev-asso.fr",     "path": "/var/www/vhosts/dev-asso.fr/regio.dev-asso.fr" },
-  { "name": "nijumatim", "url": "https://nijumatim.dev-asso.fr", "path": "/var/www/vhosts/dev-asso.fr/nijumatim.dev-asso.fr" },
-  { "name": "banana",    "url": "https://banana.dev-asso.fr",    "path": "/var/www/vhosts/dev-asso.fr/banana.dev-asso.fr" }
+  {
+    "name": "bananacamp-dev",
+    "url": "https://dev.bananacamp.fr",
+    "description": "Dev Bananacamp",
+    "notes": "Plesk : 0.6 Mo, 2.5 Mo/mois, actif."
+  },
+  {
+    "name": "sitebca",
+    "url": "https://sitebca.dev-asso.fr",
+    "description": "Site BCA",
+    "path": "/var/www/vhosts/dev-asso.fr/sitebca.dev-asso.fr",
+    "repo": "https://github.com/tmilefr/bcanimation",
+    "branch": "main",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop."
+  },
+  {
+    "name": "bca",
+    "url": "https://bca.dev-asso.fr",
+    "description": "BCA",
+    "path": "/var/www/vhosts/dev-asso.fr/bca.dev-asso.fr",
+    "repo": "https://github.com/tmilefr/bcanimation",
+    "branch": "develop",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 1.4 Mo, 65.6 Mo/mois, actif. Branches GitHub : main, develop."
+  },
+  {
+    "name": "ref",
+    "url": "https://ref.dev-asso.fr",
+    "description": "Référent Regio",
+    "path": "/var/www/vhosts/dev-asso.fr/ref.dev-asso.fr",
+    "repo": "https://github.com/tmilefr/regioreferent",
+    "branch": "main",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 3 Mo, 3 Mo/mois, actif. Branches GitHub : main, claude/new-session-g83xzb."
+  },
+  {
+    "name": "regioschule",
+    "url": "https://regioschule.dev-asso.fr",
+    "description": "Regio Schule",
+    "path": "/var/www/vhosts/dev-asso.fr/regioschule.dev-asso.fr",
+    "notes": "Plesk : 5.7 Mo, 5.4 Mo/mois, actif."
+  },
+  {
+    "name": "gestion-bananacamp",
+    "url": "https://gestion.bananacamp.fr",
+    "description": "Gestion Bananacamp",
+    "notes": "Plesk : 14.1 Mo, 25.6 Mo/mois, actif."
+  },
+  {
+    "name": "regio",
+    "url": "https://regio.dev-asso.fr",
+    "description": "Regio",
+    "path": "/var/www/vhosts/dev-asso.fr/regio.dev-asso.fr",
+    "repo": "https://github.com/tmilefr/site_travaux",
+    "branch": "develop",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 18.8 Mo, 24.9 Mo/mois, actif. Branches GitHub : main, develop."
+  },
+  {
+    "name": "cloud-laresser",
+    "url": "https://cloud.laresser.fr",
+    "description": "Cloud",
+    "notes": "Plesk : 19.6 Mo, 98.2 Mo/mois, actif."
+  },
+  {
+    "name": "bananacamp",
+    "url": "https://bananacamp.fr",
+    "description": "Site Bananacamp",
+    "repo": "https://github.com/tmilefr/sitebanana",
+    "branch": "master",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 2006 Mo, 140.6 Mo/mois, actif. Branches GitHub : master, auto/sleepy-wozniak-ac1hfw."
+  },
+  {
+    "name": "nijumatim",
+    "url": "https://nijumatim.fr",
+    "description": "Journal de voyage vélo",
+    "repo": "https://github.com/tmilefr/velo-journal",
+    "branch": "main",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 2051.6 Mo, 1114.8 Mo/mois, actif. Branches GitHub : main + ~30 branches claude/*."
+  },
+  {
+    "name": "laresser",
+    "url": "https://laresser.fr",
+    "description": "Site laresser.fr",
+    "notes": "Plesk : 3884.4 Mo, 7.4 Mo/mois, actif."
+  },
+  {
+    "name": "dev-asso",
+    "url": "https://dev-asso.fr",
+    "description": "Domaine principal (abonnement) : cockpit de suivi des projets Plesk",
+    "repo": "https://github.com/tmilefr/plesk-cockpit",
+    "branch": "main",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 4538.3 Mo, 7.1 Mo/mois, actif. Branches GitHub : main."
+  }
 ]
