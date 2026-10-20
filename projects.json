@@ -1,0 +1,22 @@
+[
+  {
+    "name": "site_travaux",
+    "url": "https://travaux.votre-domaine.fr",
+    "description": "Exemple de fiche complète : adaptez ou supprimez les champs inutiles",
+    "stack": "Node.js",
+    "node": "20",
+    "port": 3001,
+    "db": "SQLite (data/travaux.db)",
+    "repo": "git@github.com:vous/site_travaux.git",
+    "branch": "main",
+    "deploy": "Extension Git de Plesk, déploiement automatique",
+    "notes": "Redémarrer l'application depuis Node.js Toolkit après un changement du .env",
+    "pleskUrl": "",
+    "path": "",
+    "gitDir": ""
+  },
+  { "name": "wedding", "url": "https://wedding.votre-domaine.fr" },
+  { "name": "regio", "url": "https://regio.votre-domaine.fr" },
+  { "name": "nijumatim", "url": "https://nijumatim.votre-domaine.fr" },
+  { "name": "banana", "url": "https://banana.votre-domaine.fr" }
+]

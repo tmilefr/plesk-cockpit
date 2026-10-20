@@ -1,0 +1,10 @@
+{
+  "name": "cockpit",
+  "version": "1.0.0",
+  "description": "Tableau de bord de suivi des projets hébergés sur des sous-domaines",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED",
+  "private": true
+}
