@@ -111,7 +111,10 @@
   {
     "name": "dev-asso",
     "url": "https://dev-asso.fr",
-    "description": "Domaine principal (abonnement)",
-    "notes": "Plesk : 4538.3 Mo, 7.1 Mo/mois, actif."
+    "description": "Domaine principal (abonnement) : cockpit de suivi des projets Plesk",
+    "repo": "https://github.com/tmilefr/plesk-cockpit",
+    "branch": "main",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 4538.3 Mo, 7.1 Mo/mois, actif. Branches GitHub : main."
   }
 ]
