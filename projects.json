@@ -4,7 +4,10 @@
     "url": "https://RegioTesting.dev-asso.fr",
     "description": "Environnement de test Regio",
     "path": "/var/www/vhosts/dev-asso.fr/RegioTesting.dev-asso.fr",
-    "notes": "Plesk : 0 Mo, 0 Mo/mois, actif."
+    "repo": "https://github.com/tmilefr/site_travaux",
+    "branch": "develop",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 0 Mo, 0 Mo/mois, actif. Branches GitHub : main, develop."
   },
   {
     "name": "wedding",
@@ -30,7 +33,7 @@
     "repo": "https://github.com/tmilefr/bcanimation",
     "branch": "main",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop. Dépôt à confirmer (bcanimation ou site_travaux)."
+    "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop. Dépôt à confirmer."
   },
   {
     "name": "bca",
@@ -70,7 +73,10 @@
     "url": "https://regio.dev-asso.fr",
     "description": "Regio",
     "path": "/var/www/vhosts/dev-asso.fr/regio.dev-asso.fr",
-    "notes": "Plesk : 18.8 Mo, 24.9 Mo/mois, actif."
+    "repo": "https://github.com/tmilefr/site_travaux",
+    "branch": "develop",
+    "deploy": "Extension Git de Plesk",
+    "notes": "Plesk : 18.8 Mo, 24.9 Mo/mois, actif. Branches GitHub : main, develop."
   },
   {
     "name": "cloud-laresser",
