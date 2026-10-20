@@ -33,7 +33,7 @@
     "repo": "https://github.com/tmilefr/bcanimation",
     "branch": "main",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop. Dépôt à confirmer."
+    "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop."
   },
   {
     "name": "bca",
@@ -43,7 +43,7 @@
     "repo": "https://github.com/tmilefr/bcanimation",
     "branch": "develop",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 1.4 Mo, 65.6 Mo/mois, actif. Branches GitHub : main, develop. Dépôt à confirmer."
+    "notes": "Plesk : 1.4 Mo, 65.6 Mo/mois, actif. Branches GitHub : main, develop."
   },
   {
     "name": "ref",
@@ -100,7 +100,7 @@
     "repo": "https://github.com/tmilefr/velo-journal",
     "branch": "main",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 2051.6 Mo, 1114.8 Mo/mois, actif. Branches GitHub : main + ~30 branches claude/*. Dépôt à confirmer."
+    "notes": "Plesk : 2051.6 Mo, 1114.8 Mo/mois, actif. Branches GitHub : main + ~30 branches claude/*."
   },
   {
     "name": "laresser",
