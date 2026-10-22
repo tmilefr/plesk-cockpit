@@ -35,8 +35,13 @@ Champs utiles (tous facultatifs sauf `name` et `url`) :
 | `pleskUrl` | Lien direct vers le domaine dans Plesk |
 | `path` | Dossier du site sur le serveur (pour lire le dernier commit ou la date des fichiers) |
 | `gitDir` | Dépôt git à lire à la place de `path` (utile avec l'extension Git de Plesk) |
+| `envFile` | Chemin du `.env` du projet (ex. `/var/www/vhosts/dev-asso.fr/regio.dev-asso.fr/.env`) : le cockpit en lit la connexion à la base de données |
 
 Une réponse 401, 403 ou 404 compte comme « en ligne » (le serveur répond). Seules les erreurs 5xx, les délais dépassés et les échecs de connexion comptent comme une panne. Une réponse plus lente que 2 secondes est signalée « lente ».
+
+## Connexion à la base de données
+
+Si `envFile` est renseigné, le cockpit lit ce fichier et affiche dans la fiche : le pilote, l'hôte, le port, le nom de la base, l'utilisateur, et si le serveur de base répond (test TCP, sans authentification). Clés reconnues : `database.default.*` (CodeIgniter 4) et `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER` (Node.js). Le mot de passe n'est jamais lu dans le résultat ni envoyé à l'interface. Sans `envFile`, le champ texte `db` est affiché. Le fichier doit être lisible par l'utilisateur système du cockpit (même abonnement Plesk).
 
 ## À savoir
 
