@@ -15,6 +15,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const net = require('net');
 const { execFile } = require('child_process');
 
 const ROOT = __dirname;
@@ -184,6 +185,72 @@ async function gitInfo(p) {
   return value;
 }
 
+/* ---------- Connexion base de données (lue dans le .env du projet) ---------- */
+
+const dbCache = new Map();
+
+// Clés reconnues : CodeIgniter 4 (database.default.*) et Node (DB_*).
+// Le mot de passe n'est jamais lu dans le résultat : seules ces clés sont recopiées.
+const DB_KEYS = {
+  driver: ['database.default.dbdriver', 'db_driver', 'db_client'],
+  host: ['database.default.hostname', 'db_host'],
+  port: ['database.default.port', 'db_port'],
+  database: ['database.default.database', 'db_name'],
+  user: ['database.default.username', 'db_user'],
+};
+const DB_DEFAULT_PORT = { mysqli: 3306, mysql: 3306, postgre: 5432, postgres: 5432, postgresql: 5432 };
+
+function parseEnv(text) {
+  const out = {};
+  text.split(/\r?\n/).forEach((line) => {
+    const m = line.match(/^\s*(?:export\s+)?([^#=\s][^=]*?)\s*=\s*(.*?)\s*$/);
+    if (!m) return;
+    let v = m[2];
+    const q = v.match(/^(['"])(.*)\1/);
+    v = q ? q[2] : v.replace(/\s+#.*$/, '');
+    out[m[1].toLowerCase()] = v;
+  });
+  return out;
+}
+
+function tcpReachable(host, port) {
+  return new Promise((resolve) => {
+    const sock = net.connect({ host, port, timeout: 2000 });
+    sock.once('connect', () => { sock.destroy(); resolve(true); });
+    sock.once('timeout', () => { sock.destroy(); resolve(false); });
+    sock.once('error', () => resolve(false));
+  });
+}
+
+async function readDbEnv(p) {
+  let env;
+  try {
+    env = parseEnv(fs.readFileSync(p.envFile, 'utf8'));
+  } catch (e) {
+    return { error: e.code === 'ENOENT' ? 'fichier .env introuvable' : e.code === 'EACCES' ? 'fichier .env illisible (droits)' : 'lecture impossible' };
+  }
+  const info = {};
+  Object.entries(DB_KEYS).forEach(([field, keys]) => {
+    const k = keys.find((x) => env[x]);
+    if (k) info[field] = env[k];
+  });
+  if (!info.database && !info.host) return { error: 'aucune clé de base de données dans le .env' };
+  const port = Number(info.port) || DB_DEFAULT_PORT[String(info.driver || 'mysqli').toLowerCase()] || null;
+  if (port) info.port = port;
+  const host = info.host || 'localhost';
+  info.reachable = port ? await tcpReachable(host, port) : null;
+  return info;
+}
+
+async function dbInfo(p) {
+  if (!p.envFile) return null;
+  const hit = dbCache.get(p.id);
+  if (hit && Date.now() - hit.at < 60000) return hit.value;
+  const value = await readDbEnv(p);
+  dbCache.set(p.id, { at: Date.now(), value });
+  return value;
+}
+
 /* ---------- API ---------- */
 
 async function buildStatus() {
@@ -202,6 +269,7 @@ async function buildStatus() {
       checks: list.length,
       strip: list.slice(-STRIP_LENGTH).map((c) => ({ t: c.t, ok: c.ok, ms: c.ms, code: c.code })),
       git: await gitInfo(p),
+      dbEnv: await dbInfo(p),
     };
   }));
   return {

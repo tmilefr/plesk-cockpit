@@ -119,13 +119,25 @@ function deployLine(p) {
     h('p', { class: 'muted' }, 'Aucun dépôt git lisible : date déduite des fichiers du site.'));
 }
 
+function dbEnvText(d) {
+  if (d.error) return 'lecture du .env impossible : ' + d.error;
+  const target = (d.host || 'localhost') + (d.port ? ':' + d.port : '');
+  return [
+    d.driver,
+    target,
+    d.database ? 'base ' + d.database : null,
+    d.user ? 'utilisateur ' + d.user : null,
+    d.reachable === true ? 'serveur joignable' : d.reachable === false ? 'serveur injoignable' : null,
+  ].filter(Boolean).join(' · ');
+}
+
 function configRows(p) {
   const rows = [
     ['Sous-domaine', host(p.url)],
     ['Stack', p.stack],
     ['Node.js', p.node],
     ['Port', p.port],
-    ['Base de données', p.db],
+    ['Base de données', p.dbEnv ? dbEnvText(p.dbEnv) : p.db],
     ['Dépôt', p.repo],
     ['Branche', p.branch],
     ['Déploiement', p.deploy],

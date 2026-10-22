@@ -4,10 +4,13 @@
     "url": "https://RegioTesting.dev-asso.fr",
     "description": "Environnement de test Regio",
     "path": "/var/www/vhosts/dev-asso.fr/RegioTesting.dev-asso.fr",
+    "envFile": "/var/www/vhosts/dev-asso.fr/RegioTesting.dev-asso.fr/.env",
     "repo": "https://github.com/tmilefr/site_travaux",
     "branch": "develop",
+    "stack": "PHP / CodeIgniter 4",
+    "db": "MySQL (MySQLi), localhost:3306, base regiomlh_prod d'après env.example (à vérifier dans le .env du serveur)",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 0 Mo, 0 Mo/mois, actif. Branches GitHub : main, develop."
+    "notes": "Plesk : 0 Mo, 0 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
   },
   {
     "name": "wedding",
@@ -16,8 +19,10 @@
     "path": "/var/www/vhosts/dev-asso.fr/wedding.dev-asso.fr",
     "repo": "https://github.com/tmilefr/wedding",
     "branch": "main",
+    "stack": "Node.js / Express",
+    "db": "Aucune base : fichier JSON data/db.json (dossier modifiable par DATA_DIR)",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 0.4 Mo, 2.1 Mo/mois, actif. Branches GitHub : main."
+    "notes": "Plesk : 0.4 Mo, 2.1 Mo/mois, actif. Branches GitHub : main. Sauvegarde quotidienne automatique db-AAAA-MM-JJ.bak.json."
   },
   {
     "name": "bananacamp-dev",
@@ -32,18 +37,23 @@
     "path": "/var/www/vhosts/dev-asso.fr/sitebca.dev-asso.fr",
     "repo": "https://github.com/tmilefr/bcanimation",
     "branch": "main",
+    "stack": "PHP / CodeIgniter 4",
+    "db": "MySQL (MySQLi), localhost:3306, base gestion_bca d'après env.example (à vérifier dans le .env du serveur)",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop."
+    "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
   },
   {
     "name": "bca",
     "url": "https://bca.dev-asso.fr",
     "description": "BCA",
     "path": "/var/www/vhosts/dev-asso.fr/bca.dev-asso.fr",
+    "envFile": "/var/www/vhosts/dev-asso.fr/bca.dev-asso.fr/.env",
     "repo": "https://github.com/tmilefr/bcanimation",
     "branch": "develop",
+    "stack": "PHP / CodeIgniter 4",
+    "db": "MySQL (MySQLi), localhost:3306, base gestion_bca d'après env.example (à vérifier dans le .env du serveur)",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 1.4 Mo, 65.6 Mo/mois, actif. Branches GitHub : main, develop."
+    "notes": "Plesk : 1.4 Mo, 65.6 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
   },
   {
     "name": "ref",
@@ -52,8 +62,10 @@
     "path": "/var/www/vhosts/dev-asso.fr/ref.dev-asso.fr",
     "repo": "https://github.com/tmilefr/regioreferent",
     "branch": "main",
+    "stack": "Node.js",
+    "db": "MySQL, localhost:3306, base site_travaux d'après .env.example (variables DB_HOST, DB_PORT, DB_USER, DB_NAME ; à vérifier sur le serveur)",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 3 Mo, 3 Mo/mois, actif. Branches GitHub : main, claude/new-session-g83xzb."
+    "notes": "Plesk : 3 Mo, 3 Mo/mois, actif. Branches GitHub : main, claude/new-session-g83xzb. Le .env.example pointe sur la base site_travaux : base partagée avec Regio ? Script de migration : migration_node_app.sql."
   },
   {
     "name": "regioschule",
@@ -73,10 +85,13 @@
     "url": "https://regio.dev-asso.fr",
     "description": "Regio",
     "path": "/var/www/vhosts/dev-asso.fr/regio.dev-asso.fr",
+    "envFile": "/var/www/vhosts/dev-asso.fr/regio.dev-asso.fr/.env",
     "repo": "https://github.com/tmilefr/site_travaux",
     "branch": "develop",
+    "stack": "PHP / CodeIgniter 4",
+    "db": "MySQL (MySQLi), localhost:3306, base regiomlh_prod d'après env.example (à vérifier dans le .env du serveur)",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 18.8 Mo, 24.9 Mo/mois, actif. Branches GitHub : main, develop."
+    "notes": "Plesk : 18.8 Mo, 24.9 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
   },
   {
     "name": "cloud-laresser",
@@ -90,8 +105,10 @@
     "description": "Site Bananacamp",
     "repo": "https://github.com/tmilefr/sitebanana",
     "branch": "master",
+    "stack": "PHP / CodeIgniter 3 + thème WordPress",
+    "db": "MySQL (mysqli), localhost ; config versionnée application/config/development/database.php (base gestion_bca, valeurs de développement). Config de production non versionnée : à vérifier sur le serveur",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 2006 Mo, 140.6 Mo/mois, actif. Branches GitHub : master, auto/sleepy-wozniak-ac1hfw."
+    "notes": "Plesk : 2006 Mo, 140.6 Mo/mois, actif. Branches GitHub : master, auto/sleepy-wozniak-ac1hfw. Le fichier de développement contient des identifiants en clair (root) : ne pas les réutiliser."
   },
   {
     "name": "nijumatim",
@@ -99,8 +116,10 @@
     "description": "Journal de voyage vélo",
     "repo": "https://github.com/tmilefr/velo-journal",
     "branch": "main",
+    "stack": "Node.js / Express",
+    "db": "Aucune base : fichiers JSON dans data/ (posts.json, subscribers.json, settings.json) + public/uploads",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 2051.6 Mo, 1114.8 Mo/mois, actif. Branches GitHub : main + ~30 branches claude/*."
+    "notes": "Plesk : 2051.6 Mo, 1114.8 Mo/mois, actif. Branches GitHub : main + ~30 branches claude/*. À sauvegarder : data/posts.json et public/uploads/."
   },
   {
     "name": "laresser",
@@ -114,6 +133,8 @@
     "description": "Domaine principal (abonnement) : cockpit de suivi des projets Plesk",
     "repo": "https://github.com/tmilefr/plesk-cockpit",
     "branch": "main",
+    "stack": "Node.js",
+    "db": "Aucune base : historique dans data/history.json",
     "deploy": "Extension Git de Plesk",
     "notes": "Plesk : 4538.3 Mo, 7.1 Mo/mois, actif. Branches GitHub : main."
   }
