@@ -8,7 +8,6 @@
     "repo": "https://github.com/tmilefr/site_travaux",
     "branch": "develop",
     "stack": "PHP / CodeIgniter 4",
-    "db": "MySQL (MySQLi), localhost:3306, base regiomlh_prod d'après env.example (à vérifier dans le .env du serveur)",
     "deploy": "Extension Git de Plesk",
     "notes": "Plesk : 0 Mo, 0 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
   },
@@ -35,10 +34,10 @@
     "url": "https://sitebca.dev-asso.fr",
     "description": "Site BCA",
     "path": "/var/www/vhosts/dev-asso.fr/sitebca.dev-asso.fr",
+    "envFile": "/var/www/vhosts/dev-asso.fr/sitebca.dev-asso.fr/.env",
     "repo": "https://github.com/tmilefr/bcanimation",
     "branch": "main",
     "stack": "PHP / CodeIgniter 4",
-    "db": "MySQL (MySQLi), localhost:3306, base gestion_bca d'après env.example (à vérifier dans le .env du serveur)",
     "deploy": "Extension Git de Plesk",
     "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
   },
@@ -51,7 +50,6 @@
     "repo": "https://github.com/tmilefr/bcanimation",
     "branch": "develop",
     "stack": "PHP / CodeIgniter 4",
-    "db": "MySQL (MySQLi), localhost:3306, base gestion_bca d'après env.example (à vérifier dans le .env du serveur)",
     "deploy": "Extension Git de Plesk",
     "notes": "Plesk : 1.4 Mo, 65.6 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
   },
@@ -60,10 +58,10 @@
     "url": "https://ref.dev-asso.fr",
     "description": "Référent Regio",
     "path": "/var/www/vhosts/dev-asso.fr/ref.dev-asso.fr",
+    "envFile": "/var/www/vhosts/dev-asso.fr/ref.dev-asso.fr/.env",
     "repo": "https://github.com/tmilefr/regioreferent",
     "branch": "main",
     "stack": "Node.js",
-    "db": "MySQL, localhost:3306, base site_travaux d'après .env.example (variables DB_HOST, DB_PORT, DB_USER, DB_NAME ; à vérifier sur le serveur)",
     "deploy": "Extension Git de Plesk",
     "notes": "Plesk : 3 Mo, 3 Mo/mois, actif. Branches GitHub : main, claude/new-session-g83xzb. Le .env.example pointe sur la base site_travaux : base partagée avec Regio ? Script de migration : migration_node_app.sql."
   },
@@ -89,7 +87,6 @@
     "repo": "https://github.com/tmilefr/site_travaux",
     "branch": "develop",
     "stack": "PHP / CodeIgniter 4",
-    "db": "MySQL (MySQLi), localhost:3306, base regiomlh_prod d'après env.example (à vérifier dans le .env du serveur)",
     "deploy": "Extension Git de Plesk",
     "notes": "Plesk : 18.8 Mo, 24.9 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
   },
