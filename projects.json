@@ -9,7 +9,9 @@
     "branch": "develop",
     "stack": "PHP / CodeIgniter 4",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 0 Mo, 0 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
+    "notes": "Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*.",
+    "diskMb": 0,
+    "trafficMb": 0
   },
   {
     "name": "wedding",
@@ -21,13 +23,16 @@
     "stack": "Node.js / Express",
     "db": "Aucune base : fichier JSON data/db.json (dossier modifiable par DATA_DIR)",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 0.4 Mo, 2.1 Mo/mois, actif. Branches GitHub : main. Sauvegarde quotidienne automatique db-AAAA-MM-JJ.bak.json."
+    "notes": "Branches GitHub : main. Sauvegarde quotidienne automatique db-AAAA-MM-JJ.bak.json.",
+    "diskMb": 0.4,
+    "trafficMb": 2.1
   },
   {
     "name": "bananacamp-dev",
     "url": "https://dev.bananacamp.fr",
     "description": "Dev Bananacamp",
-    "notes": "Plesk : 0.6 Mo, 2.5 Mo/mois, actif."
+    "diskMb": 0.6,
+    "trafficMb": 2.5
   },
   {
     "name": "sitebca",
@@ -39,7 +44,9 @@
     "branch": "main",
     "stack": "PHP / CodeIgniter 4",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 1 Mo, 78.7 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
+    "notes": "Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*.",
+    "diskMb": 1,
+    "trafficMb": 78.7
   },
   {
     "name": "bca",
@@ -51,7 +58,9 @@
     "branch": "develop",
     "stack": "PHP / CodeIgniter 4",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 1.4 Mo, 65.6 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
+    "notes": "Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*.",
+    "diskMb": 1.4,
+    "trafficMb": 65.6
   },
   {
     "name": "ref",
@@ -63,20 +72,24 @@
     "branch": "main",
     "stack": "Node.js",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 3 Mo, 3 Mo/mois, actif. Branches GitHub : main, claude/new-session-g83xzb. Le .env.example pointe sur la base site_travaux : base partagée avec Regio ? Script de migration : migration_node_app.sql."
+    "notes": "Branches GitHub : main, claude/new-session-g83xzb. Le .env.example pointe sur la base site_travaux : base partagée avec Regio ? Script de migration : migration_node_app.sql.",
+    "diskMb": 3,
+    "trafficMb": 3
   },
   {
     "name": "regioschule",
     "url": "https://regioschule.dev-asso.fr",
     "description": "Regio Schule",
     "path": "/var/www/vhosts/dev-asso.fr/regioschule.dev-asso.fr",
-    "notes": "Plesk : 5.7 Mo, 5.4 Mo/mois, actif."
+    "diskMb": 5.7,
+    "trafficMb": 5.4
   },
   {
     "name": "gestion-bananacamp",
     "url": "https://gestion.bananacamp.fr",
     "description": "Gestion Bananacamp",
-    "notes": "Plesk : 14.1 Mo, 25.6 Mo/mois, actif."
+    "diskMb": 14.1,
+    "trafficMb": 25.6
   },
   {
     "name": "regio",
@@ -88,13 +101,16 @@
     "branch": "develop",
     "stack": "PHP / CodeIgniter 4",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 18.8 Mo, 24.9 Mo/mois, actif. Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*."
+    "notes": "Branches GitHub : main, develop. Connexion DB : fichier .env (non versionné), clés database.default.*.",
+    "diskMb": 18.8,
+    "trafficMb": 24.9
   },
   {
     "name": "cloud-laresser",
     "url": "https://cloud.laresser.fr",
     "description": "Cloud",
-    "notes": "Plesk : 19.6 Mo, 98.2 Mo/mois, actif."
+    "diskMb": 19.6,
+    "trafficMb": 98.2
   },
   {
     "name": "bananacamp",
@@ -105,7 +121,9 @@
     "stack": "PHP / CodeIgniter 3 + thème WordPress",
     "db": "MySQL (mysqli), localhost ; config versionnée application/config/development/database.php (base gestion_bca, valeurs de développement). Config de production non versionnée : à vérifier sur le serveur",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 2006 Mo, 140.6 Mo/mois, actif. Branches GitHub : master, auto/sleepy-wozniak-ac1hfw. Le fichier de développement contient des identifiants en clair (root) : ne pas les réutiliser."
+    "notes": "Branches GitHub : master, auto/sleepy-wozniak-ac1hfw. Le fichier de développement contient des identifiants en clair (root) : ne pas les réutiliser.",
+    "diskMb": 2006,
+    "trafficMb": 140.6
   },
   {
     "name": "nijumatim",
@@ -116,13 +134,16 @@
     "stack": "Node.js / Express",
     "db": "Aucune base : fichiers JSON dans data/ (posts.json, subscribers.json, settings.json) + public/uploads",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 2051.6 Mo, 1114.8 Mo/mois, actif. Branches GitHub : main + ~30 branches claude/*. À sauvegarder : data/posts.json et public/uploads/."
+    "notes": "Branches GitHub : main + ~30 branches claude/*. À sauvegarder : data/posts.json et public/uploads/.",
+    "diskMb": 2051.6,
+    "trafficMb": 1114.8
   },
   {
     "name": "laresser",
     "url": "https://laresser.fr",
     "description": "Site laresser.fr",
-    "notes": "Plesk : 3884.4 Mo, 7.4 Mo/mois, actif."
+    "diskMb": 3884.4,
+    "trafficMb": 7.4
   },
   {
     "name": "dev-asso",
@@ -133,6 +154,8 @@
     "stack": "Node.js",
     "db": "Aucune base : historique dans data/history.json",
     "deploy": "Extension Git de Plesk",
-    "notes": "Plesk : 4538.3 Mo, 7.1 Mo/mois, actif. Branches GitHub : main."
+    "notes": "Branches GitHub : main.",
+    "diskMb": 4538.3,
+    "trafficMb": 7.1
   }
 ]

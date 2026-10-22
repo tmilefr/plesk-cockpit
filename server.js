@@ -44,7 +44,7 @@ if (!ADMIN_USER || !ADMIN_PASS) {
 // Champs transmis à l'interface (les chemins serveur restent côté serveur).
 const PUBLIC_FIELDS = [
   'id', 'name', 'url', 'description', 'stack', 'node', 'port',
-  'db', 'repo', 'branch', 'deploy', 'notes', 'pleskUrl',
+  'db', 'repo', 'branch', 'deploy', 'notes', 'pleskUrl', 'diskMb', 'trafficMb',
 ];
 
 function slug(s) {

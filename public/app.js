@@ -131,6 +131,10 @@ function dbEnvText(d) {
   ].filter(Boolean).join(' · ');
 }
 
+function mo(v) {
+  return v >= 1024 ? (v / 1024).toFixed(1).replace('.', ',') + ' Go' : String(v).replace('.', ',') + ' Mo';
+}
+
 function configRows(p) {
   const rows = [
     ['Sous-domaine', host(p.url)],
@@ -141,6 +145,8 @@ function configRows(p) {
     ['Dépôt', p.repo],
     ['Branche', p.branch],
     ['Déploiement', p.deploy],
+    ['Espace disque (Plesk)', p.diskMb !== undefined ? mo(p.diskMb) : undefined],
+    ['Trafic mensuel (Plesk)', p.trafficMb !== undefined ? mo(p.trafficMb) + '/mois' : undefined],
   ].filter(([, v]) => v !== undefined && v !== '');
   return rows.map(([k, v]) => h('div', {}, h('dt', {}, k), h('dd', {}, v)));
 }
@@ -156,6 +162,7 @@ function renderProject(p, data, isOpen) {
       h('div', {},
         h('span', { class: 'title' }, p.name),
         h('span', { class: 'host' }, host(p.url)),
+        p.dbEnv || p.db ? h('span', { class: 'host' }, 'Base : ' + (p.dbEnv ? dbEnvText(p.dbEnv) : p.db)) : null,
         h('span', { class: 'state ' + st.cls }, st.text))),
     beatStrip(p, data),
     latencyMetric(p, data),
